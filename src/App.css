@@ -79,6 +79,7 @@ footer
   "span1 span2 img4";
   .sec_img1Copiar
   {
+    width: 2rem;
     grid-area: img1;
   }
   .sec_span1Copiar
@@ -90,6 +91,7 @@ footer
 
   .sec_img2Copiar
   {
+    width: 2rem;
     grid-area: img2;
   }
   .sec_span2Copiar
@@ -127,5 +129,46 @@ footer
 }
 .secccion5
 {
-  grid-area: secccion5;
+  /* grid-area: secccion5; */
+  column-gap: 10px;
+  text-align: center;
+  justify-items: center;
+  /* justify-items: start; */
+  background-color: var(--Background-Nav);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "sec5_img1Copiar sec5_img2Copiar"
+  "sec5_span1Copiar sec5_span2Copiar";
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .sec5_span1Copiar, .sec5_span2Copiar
+  {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+
+  .sec5_img1Copiar
+  {
+    width: 2rem;
+    grid-area: sec5_img1Copiar;
+  }
+  .sec5_img2Copiar
+  {
+    width: 2rem;
+    grid-area: sec5_img2Copiar;
+  }
+  .sec5_span1Copiar
+  {
+    grid-area: sec5_span1Copiar;
+  }
+  .sec5_span2Copiar
+  {
+    grid-area: sec5_span2Copiar;
+  }
 }
