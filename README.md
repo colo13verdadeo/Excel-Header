@@ -1,17 +1,8 @@
-# Adaptacion
-> Descargar los archivos y añadir los de la carpeta "assets" a la carpeta correspondiente. (/src)
-> Para el template: Descargar el App.jsx y .css
->
-> Para implementar:
-> Añadir:       `<Navbar> </Navbar>` a la zona del Nav correspondiente.
->
-> EXPLICACIONES: Se esta desarrollando con Diplay GRID, Flex. Falta añadir STATE, ONCLICK, entre otros, background al seleccionar.
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-# ATENCION: No he podido añadir un State ni añadir mas estilos para que se vea mas presentable, mañana al 19hs ya lo tendre listo al boceto!.
-
-## Previsualizacion
-<img src=/NoDownload/nav.png>
-## Previsualizacion de una pagina entera
-<img src=/NoDownload/page.png>
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
