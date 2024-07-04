@@ -1,0 +1,312 @@
+.especial
+{
+    width: 2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+#headerToolBar
+{
+    justify-content: center;
+    width: var(--Tamaño-Toolbar);
+    height: 10vh;
+    box-shadow: -5px 5px 5px #8888, 5px -5px 5px #8888;
+    background-color: var(--Background-Nav);
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#SeccionMain
+{
+    display: flex;
+    gap: var(--Gap-Nav);
+}
+
+.secccion2, .secccion1, .secccion3, .secccion4
+{
+    display: none;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.secccion1.Sopen
+{
+  /* justify-items: start; */
+  background-color: var(--Background-Nav);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "preg img1 img2 img3 S1imgCopiar S1SelectFuente S1SelectSize"
+  "preg span1 span2 span3Cortar S1imgCopiar2 mas menos";
+  .sec_img1Copiar
+  {
+    width: 2rem;
+    grid-area: img1;
+  }
+  .sec_span1Copiar
+  {
+    grid-area: span1;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .sec_img2Copiar
+  {
+    width: 2rem;
+    grid-area: img2;
+  }
+  .sec_span2Copiar
+  {
+    grid-area: span2;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .sec_span3Cortar
+  {
+    grid-area: span3Cortar;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .sec_img3Copiar
+  {
+    align-self: center;
+    grid-area: img3;
+    width: 1.4rem;
+  }
+  #consultar
+  {
+    grid-area: preg;
+  }
+  .sec1_img4Copiar
+  {
+    width: 1.4rem;
+    grid-area: S1imgCopiar;
+  }
+  .sec1_img5Copiar
+  {
+    width: 1.5rem;
+    grid-area: S1imgCopiar2;
+  }
+  .selectFuente
+  {
+    grid-area: S1SelectFuente;
+  }
+  .selectSize
+  {
+    grid-area: S1SelectSize;
+    justify-self: start;
+    margin-left: -10px;
+  }
+  .S1ImgMas
+  {
+    width: 1.4rem;
+    grid-area: mas;
+  }
+  .S1ImgMenos
+  {
+    width: 1.4rem;
+    grid-area: menos;
+    /* margin-left: -10px; */
+    justify-self: start;
+  }
+
+  border-right: 1px solid;
+}
+.secccion2.Sopen
+{
+  display: grid;
+  grid-area: secccion2;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "sec2_img1 sec2_img2 sec2_img3 sec2_img4 sec2_span5 sec2_img5 sec2_img6"
+  "sec2_span1 sec2_span2 sec2_span3 sec2_span4 sec2_span5 sec2_span6 sec2_span7";
+  .sec2_img1TablaDinamica
+  {
+    grid-area: sec2_img1;
+    width: var(--Borrar);
+  }
+  .sec2_img2GraficoDinamico
+  {
+    grid-area: sec2_img2;
+    width: var(--Borrar);
+  }
+  .sec2_img3Tabla
+  {
+    grid-area: sec2_img3;
+    width: var(--Borrar);
+  }
+  .sec2_img4Imagen
+  {
+    grid-area: sec2_img4;
+    width: var(--Borrar);
+  }
+  .sec2_img5Captura
+  {
+    grid-area: sec2_img5;
+    width: var(--Borrar);
+  }
+  .sec2_img6Formas
+  {
+    grid-area: sec2_img6;
+    width: var(--Borrar);
+  }
+  .sec2_span1
+  {
+    grid-area: sec2_span1;
+  }
+  .sec2_span2
+  {
+    grid-area: sec2_span2;
+  }
+  .sec2_span3
+  {
+    grid-area: sec2_span3;
+  }
+  .sec2_span4
+  {
+    grid-area: sec2_span4;
+  }
+  .sec2_span5
+  {
+    grid-area: sec2_span5;
+  }
+  .sec2_span6
+  {
+    grid-area: sec2_span6;
+  }
+  .sec2_span7
+  {
+    grid-area: sec2_span7;
+  }
+}
+
+.secccion3.Sopen
+{
+  display: grid;
+  grid-area: secccion3;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "sec3_img1 sec3_img2 sec3_img3"
+  "sec3_span1 sec3_span2 sec3_span3";
+  .sec3_img1WordArt
+  {
+    grid-area: sec3_img1;
+    width: var(--Borrar);
+  }
+  .sec3_img2CuadroTexto
+  {
+    width: var(--Borrar);
+    grid-area: sec3_img2;
+  }
+  .sec3_img2Grafico
+  {
+    width: var(--Borrar);
+    grid-area: sec3_img3;
+  }
+  .sec3_span1
+  {
+    grid-area: sec3_span1;
+  }
+  .sec3_span2
+  {
+    grid-area: sec3_span2;
+  }
+  .sec3_span3
+  {
+    grid-area: sec3_span3;
+  }
+
+}
+
+.secccion4.Sopen
+{
+  display: grid;
+  grid-area: secccion4;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "sec4_img1 sec4_img2 sec4_img3 sec4_img4 sec4_img5 sec4_img6 sec4_img7 sec4_img8"
+  "sec4_span1 sec4_span2 sec4_span3 sec4_span4 sec4_span5 sec4_span6 sec4_span7 sec4_span8";
+  .sec4_img1VistaPrevia
+  {
+    grid-area: sec4_img1;
+    width: var(--Borrar);
+  }
+  .sec4_img2Margenes
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img2;
+  }
+  .sec4_img3Orientacion
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img3;
+  }
+  .sec4_img4Tamano
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img4;
+  }
+  .sec4_img5AreaImpresion
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img5;
+  }
+  .sec4_img6Zoom
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img6;
+  }
+  .sec4_img7TituloImpresion
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img7;
+  }
+  .sec4_img8ImprimirEncabezado
+  {
+    width: var(--Borrar);
+    grid-area: sec4_img8;
+  }
+  .sec4_span1
+  {
+    grid-area: sec4_span1;
+  }
+  .sec4_span2
+  {
+    grid-area: sec4_span2;
+  }
+  .sec4_span3
+  {
+    grid-area: sec4_span3;
+  }
+  .sec4_span4
+  {
+    grid-area: sec4_span4;
+  }
+  .sec4_span5
+  {
+    grid-area: sec4_span5;
+  }
+  .sec4_span6
+  {
+    grid-area: sec4_span6;
+  }
+  .sec4_span7
+  {
+    grid-area: sec4_span7;
+  }
+  .sec4_span8
+  {
+    grid-area: sec4_span8;
+  }
+}

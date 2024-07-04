@@ -1,0 +1,17 @@
+:root
+{
+  --Background-Main: #cfcfcf;
+  --Sombra-Background-Nav: #ababab;
+  --Background-Nav: #D9D9D9;
+  --Gap-Nav: 5px;
+  --Tamaño-Toolbar: 80vw;
+  --Borrar: 1.4rem;
+  --Color-TopBar: #eeefef;
+  --TamañoH-TopBar: 10%;
+  --TamañoW-TopBar: 100%;
+}
+
+body
+{
+  background-color: var(--Color-TopBar);
+}

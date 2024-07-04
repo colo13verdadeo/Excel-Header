@@ -1,0 +1,41 @@
+#Menu_TopBar_
+{
+    display: flex;
+    align-items: center;
+    padding-right: 1.8%;
+    span
+    {
+        margin-left: 8%;
+    }
+    border-right: 1px solid #868686;
+}
+._TopBar_
+{
+    font-weight: 600;
+    margin: 0;
+    background-color: var(--Color-TopBar);
+    display: flex;
+    gap: 15px;
+    height: var(--TamañoH-TopBar);
+    width: var(--TamañoW-TopBar);
+    justify-content: space-around;
+    align-items: center;
+}
+
+._TopBar_ .openSpan, ._TopBar_ .Menu_TopBar_ .openSpan
+    {
+        border-radius: .2rem .3rem 0px 0px;
+        background-color: #868686;
+        transform: translateY(12px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+._TopBar_ span
+{
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.TopBarImg1
+{
+    width: 1.4rem;
+}

@@ -6,15 +6,13 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-index.html
-.eslintrc.cjs
-vite.config.js
-*gitignore*
 
 node_modules
 dist
 dist-ssr
 *.local
+*vite.config*
+.eslintrc.cjs
 
 # Editor directories and files
 .vscode/*

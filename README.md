@@ -1,12 +1,17 @@
 #Importante:
-> Aun sigue en desarrollo, falta añadir:
-> == useState, estilos, crear svg (los que hay son descargados), añadir mas elementos, correcciones visuales y arreglar margenes.
+> Falta añadir estilos y perfeccion. Me gustaria que me mencionen como quieren el diseño, si tienen un figma aun mejor.
 
-#En caso de errores:
-> Si el problema es visual: Intentar borrar en el App.css el apartado `L1`
+> Todo feedback es bueno.
+
+#En caso de errores de programacion:
+> Informarmelo.
+
+#En caso de errores visuales incorrectos:
+> Informarmelo
+
+#En caso incoherencia o correcciones:
+> Enviarme una foto de como quieren que se vea ese apartado.
+
 
 ##Muestras:
 <img src="/NoDownload/nav.png">
-
-
-<img src="/NoDownload/page.png">
