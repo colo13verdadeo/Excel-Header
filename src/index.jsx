@@ -1,4 +1,4 @@
-import {React} from 'react'
+import {React, useState} from 'react'
 
 import './index_module.css'
 
@@ -7,11 +7,12 @@ import ToolBar from './ToolBar.jsx'
 import NavBar from './NavBar.jsx'
 
 const Header = () => {
+    const [CarouselToolBar, SetCarouselToolBar] = useState(1)
     return(
         <div>
             <NavBar />
-            <TopBar />
-            <ToolBar />
+            <TopBar SetCarouselToolBar={SetCarouselToolBar}/>
+            <ToolBar CarouselBar={CarouselToolBar}/>
          
 
 

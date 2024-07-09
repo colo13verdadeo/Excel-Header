@@ -3,7 +3,7 @@ import {React, useState, useEffect} from 'react'
 import './ToolBar_module.css'
 
 
-const ToolBar = () => {
+const ToolBar = ({CarouselBar}) => {
     // Funciones y Variables
     const [Carousel, setCarousel] = useState(1)
 
@@ -26,7 +26,7 @@ const ToolBar = () => {
                 <span onClick={() => {SetCarousel(false)}}>&lt;</span>
             </div>
             <section id='SeccionMain'>
-                <div className={Carousel == 1 ? "secccion1 Sopen" : "secccion1"}>
+                <div className={CarouselBar == 2 ? "secccion1 Sopen" : "secccion1"}>
                     <span id='consultar'>Inicio?</span>
                     <img src="/svg/brocha.svg" title='Copiar Nodo' className="sec_img1Copiar"></img>
                     <span className="sec_span1Copiar">Copiar<br></br>Nodo</span>
@@ -50,7 +50,7 @@ const ToolBar = () => {
                     <img src='/svg/plus.svg' className='S1ImgMas'></img>
                     <img src='/svg/menos.svg' className='S1ImgMenos'></img>
                 </div>
-                <div className={Carousel == 2 ? "secccion2 Sopen" : "secccion2"}>
+                <div className={CarouselBar == 3 ? "secccion2 Sopen" : "secccion2"}>
                     <img src="/svg/papel.svg" className='sec2_img1TablaDinamica'></img>
                     <span className='sec2_span1'>Tabla<br></br>dinamica</span>
                     <img src="/svg/papel.svg" className='sec2_img2GraficoDinamico'></img>
@@ -69,7 +69,7 @@ const ToolBar = () => {
             Elipse de captura de pantalla */}
 
                 </div>
-                <div className={Carousel == 3 ? "secccion3 Sopen" : "secccion3"}>
+                <div className={CarouselBar == 4 ? "secccion3 Sopen" : "secccion3"}>
                     <img src='/svg/paste.svg' className='sec3_img1WordArt'></img>
                     <span className='sec3_span1'>WordArt</span>
                     <img src='/svg/paste.svg' className='sec3_img2CuadroTexto'></img>
@@ -77,7 +77,7 @@ const ToolBar = () => {
                     <img src='/svg/paste.svg' className='sec3_img2Grafico'></img>
                     <span className='sec3_span3'>Grafico</span>
                 </div>
-                <div className={Carousel == 4 ? "secccion4 Sopen" : "secccion4"}>
+                <div className={CarouselBar == 5 ? "secccion4 Sopen" : "secccion4"}>
                     <img src='/svg/paste.svg' className='sec4_img1VistaPrevia'></img>
                     <span className='sec4_span1'>Vista previa de impresion</span>
                     <img src='/svg/paste.svg' className='sec4_img2Margenes'></img>
