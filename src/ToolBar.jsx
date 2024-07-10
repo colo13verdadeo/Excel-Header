@@ -27,7 +27,6 @@ const ToolBar = ({CarouselBar}) => {
             </div>
             <section id='SeccionMain'>
                 <div className={CarouselBar == 2 ? "secccion1 Sopen" : "secccion1"}>
-                    <span id='consultar'>Inicio?</span>
                     <img src="/svg/brocha.svg" title='Copiar Nodo' className="sec_img1Copiar"></img>
                     <span className="sec_span1Copiar">Copiar<br></br>Nodo</span>
                     <img src="/svg/paste.svg" title='Pegar nodo' className="sec_img2Copiar"></img>
@@ -51,31 +50,45 @@ const ToolBar = ({CarouselBar}) => {
                     <img src='/svg/menos.svg' className='S1ImgMenos'></img>
                 </div>
                 <div className={CarouselBar == 3 ? "secccion2 Sopen" : "secccion2"}>
-                    <img src="/svg/papel.svg" className='sec2_img1TablaDinamica'></img>
+                    <img src="/svg/tabladinamica.svg" className='sec2_img1TablaDinamica'></img>
                     <span className='sec2_span1'>Tabla<br></br>dinamica</span>
-                    <img src="/svg/papel.svg" className='sec2_img2GraficoDinamico'></img>
+                    <img src="/svg/graficodinamico.svg" className='sec2_img2GraficoDinamico'></img>
                     <span src="/svg/papel.svg" className='sec2_span2'>Grafico<br></br>dinamico</span>
-                    <img src="/svg/papel.svg" className='sec2_img3Tabla'></img>
+                    <img src="/svg/tabla.svg" className='sec2_img3Tabla'></img>
                     <span className='sec2_span3'>Tabla</span>
-                    <img src="/svg/papel.svg" className='sec2_img4Imagen'></img>
+                    <img src="/svg/imagen.svg" className='sec2_img4Imagen'></img>
                     <span className='sec2_span4'>Imagen</span>
                     {/* Desde archivo, Extraer texto */}
                     <span className='sec2_span5'>Imagenes de Unsplash</span>
-                    <img src="/svg/papel.svg" className='sec2_img5Captura'></img>
+                    <img src="/svg/captura.svg" className='sec2_img5Captura'></img>
                     <span className='sec2_span6'>Captura</span>
-                    <img src="/svg/papel.svg" className='sec2_img6Formas'></img>
+                    <img src="/svg/formas.svg" className='sec2_img6Formas'></img>
                     <span className='sec2_span7'>Formas</span>
+                    <div id='WordArtDiv'>
+                        <img src="/svg/WordArt.svg" className='sec2_img7WA'></img>
+                        <span className='sec2_span8'>WordArt</span>
+                    </div>
+                    <div id='CuadroDeTextoDiv'>
+                        <img src="/svg/cuadrodetexto.svg" className='sec2_img8CT'></img>
+                        <span className='sec2_span9'>Cuadro <br></br>de Texto</span>
+                    </div>
                     {/* Rectangulo de captua de pantalla
             Elipse de captura de pantalla */}
 
                 </div>
                 <div className={CarouselBar == 4 ? "secccion3 Sopen" : "secccion3"}>
-                    <img src='/svg/paste.svg' className='sec3_img1WordArt'></img>
-                    <span className='sec3_span1'>WordArt</span>
-                    <img src='/svg/paste.svg' className='sec3_img2CuadroTexto'></img>
-                    <span className='sec3_span2'>Cuadro de texto</span>
-                    <img src='/svg/paste.svg' className='sec3_img2Grafico'></img>
-                    <span className='sec3_span3'>Grafico</span>
+                    <img src='/svg/vistaPreviaImpresion.svg' className='sec3_img1VP'></img>
+                    <span className='sec3_span1'>Vista previa de impresión</span>
+                    <img src='/svg/Margenes.svg' className='sec3_img2Margenes'></img>
+                    <span className='sec3_span2'>Margenes</span>
+                    <img src='/svg/orientacion.svg' className='sec3_img3Orientacion'></img>
+                    <span className='sec3_span3'>Orientacion</span>
+                    <img src='/svg/tamaño.svg' className='sec3_img4Tam'></img>
+                    <span className='sec3_span4'>Tamaño</span>
+                    <img src='/svg/areaDeImpresion.svg' className='sec3_img5AreaImp'></img>
+                    <span className='sec3_span5'>Area de Impresión</span>
+                    <img src='/svg/zoomDePagina.svg' className='sec3_img6ZoomPage'></img>
+                    <span className='sec3_span6'>Zoom de <br></br>página</span>
                 </div>
                 <div className={CarouselBar == 5 ? "secccion4 Sopen" : "secccion4"}>
                     <img src='/svg/paste.svg' className='sec4_img1VistaPrevia'></img>

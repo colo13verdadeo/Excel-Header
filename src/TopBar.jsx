@@ -4,7 +4,7 @@ import './TopBar_module.css'
 
 const TopBar = ({SetCarouselToolBar}) => {
 
-    const [estadoSpan, setEstadoSpan] = useState(1)
+    const [estadoSpan, setEstadoSpan] = useState(2)
 
     return(
         <div className='_TopBar_'>

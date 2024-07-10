@@ -10,6 +10,7 @@
 }
 #headerToolBar
 {
+
     justify-content: center;
     width: var(--Tamaño-Toolbar);
     height: 10vh;
@@ -41,14 +42,14 @@
   /* justify-items: start; */
   background-color: var(--Background-Nav);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "preg img1 img2 img3 S1imgCopiar S1SelectFuente S1SelectSize"
-  "preg span1 span2 span3Cortar S1imgCopiar2 mas menos";
+  "img1 img2 img3 S1imgCopiar S1SelectFuente S1SelectSize"
+  "span1 span2 span3Cortar S1imgCopiar2 mas menos";
   .sec_img1Copiar
   {
-    width: 2rem;
+    width: 1.4rem;
     grid-area: img1;
   }
   .sec_span1Copiar
@@ -60,7 +61,7 @@
 
   .sec_img2Copiar
   {
-    width: 2rem;
+    width: 1.4rem;
     grid-area: img2;
   }
   .sec_span2Copiar
@@ -80,10 +81,6 @@
     align-self: center;
     grid-area: img3;
     width: 1.4rem;
-  }
-  #consultar
-  {
-    grid-area: preg;
   }
   .sec1_img4Copiar
   {
@@ -118,17 +115,17 @@
     justify-self: start;
   }
 
-  border-right: 1px solid;
+  /* border-right: 1px solid; */
 }
 .secccion2.Sopen
 {
   display: grid;
   grid-area: secccion2;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "sec2_img1 sec2_img2 sec2_img3 sec2_img4 sec2_span5 sec2_img5 sec2_img6"
-  "sec2_span1 sec2_span2 sec2_span3 sec2_span4 sec2_span5 sec2_span6 sec2_span7";
+  "sec2_img1 sec2_img2 sec2_img3 sec2_img4 sec2_span5 sec2_img5 sec2_img6 WordArtDiv"
+  "sec2_span1 sec2_span2 sec2_span3 sec2_span4 sec2_span5 sec2_span6 sec2_span7 CT";
   .sec2_img1TablaDinamica
   {
     grid-area: sec2_img1;
@@ -159,6 +156,16 @@
     grid-area: sec2_img6;
     width: var(--Borrar);
   }
+  .sec2_img7WA
+  {
+    grid-area: sec2_img7;
+    width: 1.2rem;
+  }
+  .sec2_img8CT
+  {
+    margin-right: 3px;
+    width: 1.2rem;
+  }
   .sec2_span1
   {
     grid-area: sec2_span1;
@@ -187,31 +194,61 @@
   {
     grid-area: sec2_span7;
   }
+  #WordArtDiv
+  {
+    grid-area: WordArtDiv;
+    display: flex;
+    align-items: flex-end;
+    /* flex-direction: column; */
+  }
+  #CuadroDeTextoDiv
+  {
+    grid-area: CT;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
 }
 
 .secccion3.Sopen
 {
   display: grid;
   grid-area: secccion3;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "sec3_img1 sec3_img2 sec3_img3"
-  "sec3_span1 sec3_span2 sec3_span3";
-  .sec3_img1WordArt
+  "sec3_img1 sec3_img2 sec3_img3 sec3_img4 sec3_img5 sec3_img6"
+  "sec3_span1 sec3_span2 sec3_span3 sec3_span4 sec3_span5 sec3_span6";
+  .sec3_img1VP
   {
     grid-area: sec3_img1;
     width: var(--Borrar);
   }
-  .sec3_img2CuadroTexto
+  .sec3_img2Margenes
   {
     width: var(--Borrar);
     grid-area: sec3_img2;
   }
-  .sec3_img2Grafico
+  .sec3_img3Orientacion
   {
     width: var(--Borrar);
     grid-area: sec3_img3;
+  }
+  .sec3_img4Tam
+  {
+    width: var(--Borrar);
+    grid-area: sec3_img4;
+  }
+  .sec3_img5AreaImp
+  {
+    width: var(--Borrar);
+    grid-area: sec3_img5;
+  }
+  .sec3_img6ZoomPage
+  {
+    width: var(--Borrar);
+    grid-area: sec3_img6;
   }
   .sec3_span1
   {
@@ -224,6 +261,18 @@
   .sec3_span3
   {
     grid-area: sec3_span3;
+  }
+  .sec3_span4
+  {
+    grid-area: sec3_span4;
+  }
+  .sec3_span5
+  {
+    grid-area: sec3_span5;
+  }
+  .sec3_span6
+  {
+    grid-area: sec3_span6;
   }
 
 }
