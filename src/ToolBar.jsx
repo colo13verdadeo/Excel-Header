@@ -1,7 +1,6 @@
-import {React, useState, useEffect} from 'react'
+import React,{ useState, useEffect} from 'react'
 
 import './ToolBar_module.css'
-
 
 const ToolBar = ({CarouselBar}) => {
     // Funciones y Variables
@@ -22,9 +21,9 @@ const ToolBar = ({CarouselBar}) => {
     }
     return(
         <nav id='headerToolBar'>
-            <div className='especial'>
+            {/* <div className='especial'>
                 <span onClick={() => {SetCarousel(false)}}>&lt;</span>
-            </div>
+            </div> */}
             <section id='SeccionMain'>
                 <div className={CarouselBar == 2 ? "secccion1 Sopen" : "secccion1"}>
                     <img src="/svg/brocha.svg" title='Copiar Nodo' className="sec_img1Copiar"></img>
@@ -89,29 +88,55 @@ const ToolBar = ({CarouselBar}) => {
                     <span className='sec3_span5'>Area de Impresión</span>
                     <img src='/svg/zoomDePagina.svg' className='sec3_img6ZoomPage'></img>
                     <span className='sec3_span6'>Zoom de <br></br>página</span>
+                    <div className='sec3_div1'>
+                        <img src='/svg/titulosDeimpresion.svg'></img>
+                        <span>Titulos de impresion</span>
+                    </div>
+                    <div className='sec3_div2'>
+                        <img src='/svg/imprimirEncabezado.svg'></img>
+                        <span>Imprimir encabezado y pie pagina</span>
+                    </div>
                 </div>
                 <div className={CarouselBar == 5 ? "secccion4 Sopen" : "secccion4"}>
-                    <img src='/svg/paste.svg' className='sec4_img1VistaPrevia'></img>
-                    <span className='sec4_span1'>Vista previa de impresion</span>
-                    <img src='/svg/paste.svg' className='sec4_img2Margenes'></img>
-                    <span className='sec4_span2'>Margenes</span>
-                    <img src='/svg/paste.svg' className='sec4_img3Orientacion'></img>
-                    <span className='sec4_span3'>Orientacion</span>
-                    <img src='/svg/paste.svg' className='sec4_img4Tamano'></img>
-                    <span className='sec4_span4'>Tamaño</span>
-                    <img src='/svg/paste.svg' className='sec4_img5AreaImpresion'></img>
-                    <span className='sec4_span5'>Area de impresion</span>
-                    <img src='/svg/paste.svg' className='sec4_img6Zoom'></img>
-                    <span className='sec4_span6'>Zoom</span>
-                    <img src='/svg/paste.svg' className='sec4_img7TituloImpresion'></img>
-                    <span className='sec4_span7'>Titulos de Impresion</span>
-                    <img src='/svg/paste.svg' className='sec4_img8ImprimirEncabezado'></img>
-                    <span className='sec4_span8'>Imprimir encabezado y pie de pagina</span>
+                    <img src='/svg/insertarFuncion.svg' className='sec4_img1IF'></img>
+                    <span className='sec4_span1'>Insertar Funcion</span>
+                    <img src='/svg/autosuma.svg' className='sec4_img2Autosuma'></img>
+                    <span className='sec4_span2'>Autosuma</span>
+                    <img src='/svg/recientes.svg' className='sec4_img3Recientes'></img>
+                    <span className='sec4_span3'>Recientes</span>
+                    <div className='sec4_div1'>
+                        <img src='/svg/financieras.svg' className='sec4_img4Tamano'></img>
+                        <span>Financieras</span>
+                    </div>
+                    <div className='sec4_div2'>
+                        <img src='/svg/logicas.svg' className='sec4_img4Tamano'></img>
+                        <span>Logicas</span>
+                    </div>
+                    <div className='sec4_div3'>
+                        <img src='/svg/texto.svg' className='sec4_img4Tamano'></img>
+                        <span>Texto</span>
+                    </div>
+                    <div className='sec4_div4'>
+                        <img src='/svg/fechayHora.svg' className='sec4_img4Tamano'></img>
+                        <span>Fecha y Hora</span>
+                    </div>
+                    <div className='sec4_div5'>
+                        <img src='/svg/busquedReferencia.svg' className='sec4_img6Zoom'></img>
+                        <span>Busqueda y referencia</span>
+                    </div>
+                    <div className='sec4_div6'>
+                        <img src='/svg/matematicaTrigono.svg' className='sec4_img6Zoom'></img>
+                        <span>Matematicas y trigonometricas</span>
+                    </div>
+                    <div className='sec4_div7'>
+                        <img src='/svg/masFunciones.svg' className='sec4_img6Zoom'></img>
+                        <span>Mas<br></br>funciones</span>
+                    </div>
                 </div>
             </section>
-            <div  onClick={() => {SetCarousel(true)}} className='especial'>
+            {/* <div  onClick={() => {SetCarousel(true)}} className='especial'>
                 <span>&gt;</span>
-            </div>
+            </div> */}
         </nav>
         /*<div>
      <div style={{display: 'none'}}>

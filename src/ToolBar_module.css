@@ -215,11 +215,11 @@
 {
   display: grid;
   grid-area: secccion3;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "sec3_img1 sec3_img2 sec3_img3 sec3_img4 sec3_img5 sec3_img6"
-  "sec3_span1 sec3_span2 sec3_span3 sec3_span4 sec3_span5 sec3_span6";
+  "sec3_img1 sec3_img2 sec3_img3 sec3_img4 sec3_img5 sec3_img6 sec3_div1 sec3_div1"
+  "sec3_span1 sec3_span2 sec3_span3 sec3_span4 sec3_span5 sec3_span6 sec3_div2 sec3_div2";
   .sec3_img1VP
   {
     grid-area: sec3_img1;
@@ -274,6 +274,28 @@
   {
     grid-area: sec3_span6;
   }
+  .sec3_div1, .sec3_div2
+  {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+  }
+
+  .sec3_div1 img, .sec3_div2 img
+  {
+    width: 1.2rem;
+    margin-right: 5px;
+  }
+
+
+  .sec3_div1
+  {
+    grid-area: sec3_div1;
+  }
+  .sec3_div2
+  {
+    grid-area: sec3_div2;
+  }
 
 }
 
@@ -281,45 +303,28 @@
 {
   display: grid;
   grid-area: secccion4;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "sec4_img1 sec4_img2 sec4_img3 sec4_img4 sec4_img5 sec4_img6 sec4_img7 sec4_img8"
-  "sec4_span1 sec4_span2 sec4_span3 sec4_span4 sec4_span5 sec4_span6 sec4_span7 sec4_span8";
-  .sec4_img1VistaPrevia
+  "sec4_img1 sec4_img2 sec4_img3 sec4_div1 sec4_div3 sec4_div5 sec4_div5 sec4_div7"
+  "sec4_span1 sec4_span2 sec4_span3 sec4_div2 sec4_div4 sec4_div6 sec4_div6 sec4_div7";
+  .sec4_img1IF
   {
     grid-area: sec4_img1;
     width: var(--Borrar);
   }
-  .sec4_img2Margenes
+  .sec4_img2Autosuma
   {
     width: var(--Borrar);
     grid-area: sec4_img2;
   }
-  .sec4_img3Orientacion
+  .sec4_img3Recientes, .sec4_img4Tamano, .sec4_img5AreaImpresion, .sec4_img6Zoom, .sec4_img7TituloImpresion
   {
     width: var(--Borrar);
-    grid-area: sec4_img3;
-  }
-  .sec4_img4Tamano
-  {
-    width: var(--Borrar);
-    grid-area: sec4_img4;
   }
   .sec4_img5AreaImpresion
   {
-    width: var(--Borrar);
     grid-area: sec4_img5;
-  }
-  .sec4_img6Zoom
-  {
-    width: var(--Borrar);
-    grid-area: sec4_img6;
-  }
-  .sec4_img7TituloImpresion
-  {
-    width: var(--Borrar);
-    grid-area: sec4_img7;
   }
   .sec4_img8ImprimirEncabezado
   {
@@ -338,24 +343,42 @@
   {
     grid-area: sec4_span3;
   }
-  .sec4_span4
+  .sec4_div1
   {
-    grid-area: sec4_span4;
+    grid-area: sec4_div1;
   }
-  .sec4_span5
+  .sec4_div2
   {
-    grid-area: sec4_span5;
+    grid-area: sec4_div2;
   }
-  .sec4_span6
+  .sec4_div3
   {
-    grid-area: sec4_span6;
+    grid-area: sec4_div3;
   }
-  .sec4_span7
+  .sec4_div4
   {
-    grid-area: sec4_span7;
+    grid-area: sec4_div4;
   }
-  .sec4_span8
+  .sec4_div5
   {
-    grid-area: sec4_span8;
+    grid-area: sec4_div5;
+  }
+  .sec4_div6
+  {
+    grid-area: sec4_div6;
+  }
+  .sec4_div7
+  {
+    grid-area: sec4_div7;
+  }
+  .sec4_div1, .sec4_div2, .sec4_div3, .sec4_div4, .sec4_div5, .sec4_div6, .sec4_div7
+  {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+  }
+  .sec4_div2 img, .sec4_div1 img, .sec4_div3 img, .sec4_div4 img, .sec4_div5 img, .sec4_div6 img, .sec4_div7 img
+  {
+    margin-right: 5px;
   }
 }

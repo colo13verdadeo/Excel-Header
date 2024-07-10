@@ -1,0 +1,80 @@
+.menuDes,
+.menu_secundario {
+  position: absolute;
+  background-color: white;
+
+  padding-inline: 1em;
+
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.menuDes {
+  top: 5.5em;
+}
+.menuDes ul {
+  list-style-type: none;
+  padding: 0;
+  min-width: 250px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  padding-right: 1em;
+}
+.menuDes ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 12px;
+  cursor: pointer;
+
+}
+.menuDes ul li:hover {
+  background-color: #dddddd;
+}
+.menuDes button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  justify-content: left;
+  flex-direction: row-reverse;
+}
+.menuDes li button:nth-child(1) {
+  flex-grow: 1;
+  align-items: center;
+}
+.menuDes li button{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    
+}
+
+.menuDes button:nth-child(2) {
+  display: flex;
+  justify-content: end;
+}
+.menuDes .chevron_right{
+    border-left: 1px solid #868686;
+
+}
+.menuDes ul li button span {
+  margin-left: 0 !important;
+}
+.menuDes .menu_secundario {
+  top: 0;
+  left: 100%;
+  z-index: 1;
+
+}
+
+.menuDes .menu_secundario li button{
+    justify-content: left;
+   flex-direction: row-reverse;
+  
+  }
+#save_as{
+top: 10em;
+
+}
