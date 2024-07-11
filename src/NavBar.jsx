@@ -2,6 +2,9 @@ import React from 'react'
 
 import './NavBar_module.css'
 
+//SVGs
+import brocha from './assets/SVG/brocha.svg'
+
 const NavBar = () => {
     return(
         <div id='_NavBar_'>
@@ -10,7 +13,7 @@ const NavBar = () => {
             <span>Nuevo</span>
             <span>Documento1</span>
             <span>Documento2</span>
-            <img src='/svg/brocha.svg'></img>
+            <img src={brocha}></img>
             <span>Mi cuenta</span>
         </div>
     )

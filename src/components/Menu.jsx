@@ -2,6 +2,12 @@ import React,{useState,useRef,useEffect} from "react";
 import NewWorkBook from "./menu/NewWorkBook";
 import SaveAs from "./menu/SaveAs";
 import "./Menu_module.css"
+
+//SVGs
+import paste from '../assets/SVG/paste.svg'
+import chevronRight from '../assets/SVG/chevronRight.svg'
+
+
 export default function Menu({setIsMenuOpen}){
    
     const [hoverMenuState, setHoverMenuState] = useState();
@@ -13,15 +19,14 @@ export default function Menu({setIsMenuOpen}){
       setHoverMenuState(position);
     }
   
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
-        setIsMenuOpen()
-      }
-    };
-  
     useEffect(() => {
-      document.addEventListener("click", handleClickOutside);
-    }, []);
+      let handler = (e) =>
+        {
+            if(menuRef.current != null && !menuRef.current.contains(e.target))
+              setIsMenuOpen()
+        }
+        document.addEventListener("mousedown", handler)
+    })
 
     return (
 
@@ -33,37 +38,37 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Nuevo</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
 
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(1)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Abrir</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Guardar</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
                 <li>
@@ -71,36 +76,36 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Guardar como</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Exportar a PDF</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Exportar como Imagen</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
                 <li>
@@ -108,16 +113,16 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Save As</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <hr></hr>
@@ -126,16 +131,16 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Imprimir</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
@@ -143,16 +148,16 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Compartir</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
@@ -160,16 +165,16 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Cifrado de documento</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <hr>
@@ -180,36 +185,36 @@ export default function Menu({setIsMenuOpen}){
                   <button>
                     <span>Copia de seguridad y recuperacion</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                   <button
                     className="chevron_right"
                     onMouseEnter={() => handleMenuHover(4)}
                   >
-                    <img src="/svg/chevronRight.svg" width={24}></img>
+                    <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Ayuda</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
                 <li>
                   <button>
                     <span>Opciones</span>
                     <img
-                      src="/svg/paste.svg"
+                      src={paste}
                       className="sec4_img1VistaPrevia"
                       width={24}
-                    ></img>
+                    />
                   </button>
                 </li>
               </ul>

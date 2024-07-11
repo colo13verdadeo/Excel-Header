@@ -1,4 +1,8 @@
 import React from "react";
+
+//SVGs
+import paste from "../../assets/SVG/paste.svg"
+
 export default function NewWorkBook() {
   return (
     <div className="menu_secundario" id = "newworkbook">
@@ -9,10 +13,10 @@ export default function NewWorkBook() {
           <button>
             <span>New Blank Woekbook</span>
             <img
-              src="/svg/paste.svg"
+              src={paste}
               className="sec4_img1VistaPrevia"
               width={28}
-            ></img>
+            />
           </button>
 
 
@@ -21,10 +25,10 @@ export default function NewWorkBook() {
           <button>
             <span>New Excel 2003 Workbook</span>
             <img
-              src="/svg/paste.svg"
+              src={paste}
               className="sec4_img1VistaPrevia"
               width={28}
-            ></img>
+            />
           </button>
 
 
@@ -33,10 +37,10 @@ export default function NewWorkBook() {
           <button>
             <span>New From Other Templates...</span>
             <img
-              src="/svg/paste.svg"
+              src={paste}
               className="sec4_img1VistaPrevia"
               width={28}
-            ></img>
+            />
           </button>
 
 
@@ -45,10 +49,10 @@ export default function NewWorkBook() {
           <button>
             <span>New From Default Templates...</span>
             <img
-              src="/svg/paste.svg"
+              src={paste}
               className="sec4_img1VistaPrevia"
               width={28}
-            ></img>
+            />
           </button>
 
 
