@@ -3,15 +3,15 @@ import React from "react";
 import paste from '../../assets/SVG/paste.svg'
 
 
-export default function Print() {
+export default function SecureAndRecovery() {
   return (
-    <div className="menu_secundario" id="PrintMenu">
-      <h3>Imprimir</h3>
+    <div className="menu_secundario" id="SecureAndRecovery">
+      <h3>Copia de seguridad y recuperacion</h3>
       <hr></hr>
       <ul>
         <li>
           <button>
-            <span>Imprimir...</span>
+            <span>Copia de seguridad automatica</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
@@ -21,7 +21,7 @@ export default function Print() {
         </li>
         <li>
           <button>
-            <span>Vista previa de impresion...</span>
+            <span>Reparacion de archivos</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"

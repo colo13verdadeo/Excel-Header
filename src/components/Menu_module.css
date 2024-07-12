@@ -66,7 +66,7 @@
   top: 0;
   left: 100%;
   z-index: 1;
-
+  width: 100%;
 }
 
 .menuDes .menu_secundario li button{
@@ -76,5 +76,21 @@
   }
 #save_as{
 top: 10em;
-
+width: 100%;
+}
+#PrintMenu{
+top: 17em;
+width: 100%;
+}
+#ShareMenu{
+top: 20em;
+width: 100%;
+}
+#EncryptMenu{
+top: 23em;
+width: 100%;
+}
+#SecureAndRecovery{
+top: 26em;
+width: 100%;
 }

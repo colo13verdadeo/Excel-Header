@@ -3,15 +3,15 @@ import React from "react";
 import paste from '../../assets/SVG/paste.svg'
 
 
-export default function Print() {
+export default function Encrypt() {
   return (
-    <div className="menu_secundario" id="PrintMenu">
-      <h3>Imprimir</h3>
+    <div className="menu_secundario" id="EncryptMenu">
+      <h3>Cifrado de documento</h3>
       <hr></hr>
       <ul>
         <li>
           <button>
-            <span>Imprimir...</span>
+            <span>Cifrado...</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
@@ -21,7 +21,7 @@ export default function Print() {
         </li>
         <li>
           <button>
-            <span>Vista previa de impresion...</span>
+            <span>Propiedades...</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"

@@ -6,12 +6,12 @@ import paste from "../../assets/SVG/paste.svg"
 export default function NewWorkBook() {
   return (
     <div className="menu_secundario" id = "newworkbook">
-        <h3>New Workbook</h3>
-        <hr></hr>
+        <h3>Nuevo libro</h3>
+        <hr/>
       <ul>
         <li>
           <button>
-            <span>New Blank Woekbook</span>
+            <span>Nuevo libro de trabajo en blanco</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
@@ -23,7 +23,7 @@ export default function NewWorkBook() {
         </li>
         <li>
           <button>
-            <span>New Excel 2003 Workbook</span>
+            <span>Nuevo libro de excel 2003</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
@@ -35,7 +35,7 @@ export default function NewWorkBook() {
         </li>
         <li>
           <button>
-            <span>New From Other Templates...</span>
+            <span>Nuevo desde otra plantilla</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
@@ -47,15 +47,13 @@ export default function NewWorkBook() {
         </li>
         <li>
           <button>
-            <span>New From Default Templates...</span>
+            <span>Nuevo desde otra plantilla predeterminada...</span>
             <img
               src={paste}
               className="sec4_img1VistaPrevia"
               width={28}
             />
           </button>
-
-
         </li>
       </ul>
     </div>

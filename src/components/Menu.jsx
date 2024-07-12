@@ -1,6 +1,10 @@
 import React,{useState,useRef,useEffect} from "react";
 import NewWorkBook from "./menu/NewWorkBook";
 import SaveAs from "./menu/SaveAs";
+import Print from "./menu/Print"
+import Share from "./menu/Share"
+import Encrypt from "./menu/Encrypt"
+import SecureAndRecovery from "./menu/CopySecured";
 import "./Menu_module.css"
 
 //SVGs
@@ -16,6 +20,7 @@ export default function Menu({setIsMenuOpen}){
     
   
     function handleMenuHover(position) {
+      console.log(position)
       setHoverMenuState(position);
     }
   
@@ -109,25 +114,7 @@ export default function Menu({setIsMenuOpen}){
                   </button>
                 </li>
                 <li>
-                  {hoverMenuState === 4 && <SaveAs />}
-                  <button>
-                    <span>Save As</span>
-                    <img
-                      src={paste}
-                      className="sec4_img1VistaPrevia"
-                      width={24}
-                    />
-                  </button>
-                  <button
-                    className="chevron_right"
-                    onMouseEnter={() => handleMenuHover(4)}
-                  >
-                    <img src={chevronRight} width={24}/>
-                  </button>
-                </li>
-                <hr></hr>
-                <li>
-                  {hoverMenuState === 4 && <SaveAs />}
+                  {hoverMenuState === 7 && <Print />}
                   <button>
                     <span>Imprimir</span>
                     <img
@@ -138,13 +125,14 @@ export default function Menu({setIsMenuOpen}){
                   </button>
                   <button
                     className="chevron_right"
-                    onMouseEnter={() => handleMenuHover(4)}
+                    onMouseEnter={() => handleMenuHover(7)}
                   >
                     <img src={chevronRight} width={24}/>
                   </button>
                 </li>
+                <hr></hr>
                 <li>
-                  {hoverMenuState === 4 && <SaveAs />}
+                  {hoverMenuState === 8 && <Share />}
                   <button>
                     <span>Compartir</span>
                     <img
@@ -155,13 +143,13 @@ export default function Menu({setIsMenuOpen}){
                   </button>
                   <button
                     className="chevron_right"
-                    onMouseEnter={() => handleMenuHover(4)}
+                    onMouseEnter={() => handleMenuHover(8)}
                   >
                     <img src={chevronRight} width={24}/>
                   </button>
                 </li>
                 <li>
-                  {hoverMenuState === 4 && <SaveAs />}
+                  {hoverMenuState === 9 && <Encrypt />}
                   <button>
                     <span>Cifrado de documento</span>
                     <img
@@ -172,16 +160,13 @@ export default function Menu({setIsMenuOpen}){
                   </button>
                   <button
                     className="chevron_right"
-                    onMouseEnter={() => handleMenuHover(4)}
+                    onMouseEnter={() => handleMenuHover(9)}
                   >
                     <img src={chevronRight} width={24}/>
                   </button>
                 </li>
-                <hr>
-                </hr>
-
                 <li>
-                  {hoverMenuState === 4 && <SaveAs />}
+                  {hoverMenuState === 10 && <SecureAndRecovery />}
                   <button>
                     <span>Copia de seguridad y recuperacion</span>
                     <img
@@ -192,11 +177,13 @@ export default function Menu({setIsMenuOpen}){
                   </button>
                   <button
                     className="chevron_right"
-                    onMouseEnter={() => handleMenuHover(4)}
+                    onMouseEnter={() => handleMenuHover(10)}
                   >
                     <img src={chevronRight} width={24}/>
                   </button>
                 </li>
+                <hr/>
+
                 <li>
                   <button>
                     <span>Ayuda</span>
@@ -210,6 +197,16 @@ export default function Menu({setIsMenuOpen}){
                 <li>
                   <button>
                     <span>Opciones</span>
+                    <img
+                      src={paste}
+                      className="sec4_img1VistaPrevia"
+                      width={24}
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>Salir</span>
                     <img
                       src={paste}
                       className="sec4_img1VistaPrevia"
