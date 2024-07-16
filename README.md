@@ -3,6 +3,15 @@
 
 > Todo feedback es bueno.
 
+## Version 1.4:
+> Se ha implementado nuevos iconos.
+> Se ha añadido Tippy para producir rapidamente los hovers que porta el programa. Se ha lanzado una demostracion.
+> Se ha corregido palabras
+> Se han añadido nuevas secciones.
+> Se ha añadido como prueba la obtencion de una funcionciones a traves de una funcion, esta se puede ver reflejada al clickear en "inicio" y ver la consola.
+
+> Importante utilizar "npm install" dentro del directorio para instalar Tippy de no tenerlo.
+
 # En caso de errores de programacion:
 > Informarmelo.
 
