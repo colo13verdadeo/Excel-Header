@@ -1,7 +1,7 @@
 import React, { useState , useEffect,useRef} from "react";
 import "./TopBar_module.css";
 import Menu from "./components/Menu";
-
+import ContentScroll from "./components/ContentScroll";
 //SVGs
 import barras from './assets/SVG/barras.svg'
 
@@ -9,8 +9,11 @@ const TopBar = ({ SetCarouselToolBar }) => {
   const [estadoSpan, setEstadoSpan] = useState(2);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const buttonRef = useRef(null);
+const contentRef = useRef()
+
   return (
-    <div className="_TopBar_">
+    <div className="_TopBar_" ref={contentRef} >
+      <ContentScroll ref={contentRef} reloadProps = {[isMenuOpen]}/>
       <div ref={buttonRef} id="Menu_TopBar_" onClick={() => setIsMenuOpen((prev) => !prev)}>
         <img src={barras} className="TopBarImg1"/>
         <span

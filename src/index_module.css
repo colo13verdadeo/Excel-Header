@@ -1,3 +1,4 @@
+
 :root
 {
   --Background-Main: #cfcfcf;
@@ -10,8 +11,11 @@
   --TamañoH-TopBar: 10%;
   --TamañoW-TopBar: 100%;
 }
-
 body
 {
   background-color: var(--Color-TopBar);
+
+}*{
+    font-family: "Poppins", sans-serif;
 }
+

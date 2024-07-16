@@ -1,181 +1,61 @@
+//Components
+import Review from "./toolSections/Review";
+import Formula from "./toolSections/Formula";
+import View from "./toolSections/View";
+import Tools from "./toolSections/Tools";
+import PageLayout from "./toolSections/PageLayout";
+import Insert from "./toolSections/Insert";
+import Home from "./toolSections/Home";
 //LIBS
-import React,{ useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef } from "react";
 
 //SVGs
-import brocha from './assets/SVG/brocha.svg'
-import paste from './assets/SVG/paste.svg'
-import tigeras from './assets/SVG/tigeras.svg'
-import papel from './assets/SVG/papel.svg'
-import plus from './assets/SVG/plus.svg'
-import menos from './assets/SVG/menos.svg'
-import tabladinamica from './assets/SVG/tabladinamica.svg'
-import graficodinamico from './assets/SVG/graficodinamico.svg'
-import tabla from './assets/SVG/tabla.svg'
-import imagen from './assets/SVG/imagen.svg'
-import captura from './assets/SVG/captura.svg'
-import formas from './assets/SVG/formas.svg'
-import WordArt from './assets/SVG/WordArt.svg'
-import cuadrodetexto from './assets/SVG/cuadrodetexto.svg'
-import vistaPreviaImpresion from './assets/SVG/vistaPreviaImpresion.svg'
-import Margenes from './assets/SVG/Margenes.svg'
-import orientacion from './assets/SVG/orientacion.svg'
-import tamaño from './assets/SVG/tamaño.svg'
-import areaDeImpresion from './assets/SVG/areaDeImpresion.svg'
-import zoomDePagina from './assets/SVG/zoomDePagina.svg'
-import titulosDeimpresion from './assets/SVG/titulosDeimpresion.svg'
-import imprimirEncabezado from './assets/SVG/imprimirEncabezado.svg'
-import insertarFuncion from './assets/SVG/insertarFuncion.svg'
-import autosuma from './assets/SVG/autosuma.svg'
-import recientes from './assets/SVG/recientes.svg'
-import financieras from './assets/SVG/financieras.svg'
-import logicas from './assets/SVG/logicas.svg'
-import texto from './assets/SVG/texto.svg'
-import fechayHora from './assets/SVG/fechayHora.svg'
-import busquedReferencia from './assets/SVG/busquedReferencia.svg'
-import matematicaTrigono from './assets/SVG/matematicaTrigono.svg'
-import masFunciones from './assets/SVG/masFunciones.svg'
-
 
 //MODULES
-import './ToolBar_module.css'
+import "./ToolBar_module.css";
+import ContentScroll from "./components/ContentScroll";
 
-const ToolBar = ({CarouselBar}) => {
-    // Funciones y Variables
-    const [Carousel, setCarousel] = useState(1)
+const ToolBar = ({ CarouselBar }) => {
+  // Funciones y Variables
+  const [Carousel, setCarousel] = useState(1);
+ 
+  // Fin Funciones y Variables
+  function SetCarousel(sumar) {
+    // console.log(Carousel, sumar)
+    // Crear contador de secciones y modificar cantidad de carousels!!
+    if ((Carousel == 1 && !sumar) || (Carousel > 4 && Carousel <= 5 && sumar))
+      return;
+    if (sumar) setCarousel(Carousel + 1);
+    else setCarousel(Carousel - 1);
+    console.log("Mostrando carousel numero:", Carousel);
+  }
 
-    // Fin Funciones y Variables
-    function SetCarousel(sumar) 
-    {
-        // console.log(Carousel, sumar)
-        // Crear contador de secciones y modificar cantidad de carousels!!
-        if ((Carousel == 1 && !sumar) || Carousel > 4 && (Carousel <= 5 && sumar))
-            return
-        if(sumar)
-            setCarousel(Carousel + 1)
-        else
-            setCarousel(Carousel - 1)
-        console.log('Mostrando carousel numero:', Carousel)
-    }
-    return(
-        <nav id='headerToolBar'>
-            {/* <div className='especial'>
+
+  const contentRef = useRef(null);
+
+  return (
+    <nav id="headerToolBar" ref={contentRef}>
+
+      <ContentScroll ref={contentRef} reloadProps = {[CarouselBar]}/>
+
+      {/* <div className='especial'>
                 <span onClick={() => {SetCarousel(false)}}>&lt;</span>
             </div> */}
-            <section id='SeccionMain'>
-                <div className={CarouselBar == 2 ? "secccion1 Sopen" : "secccion1"}>
-                    <img src={brocha} title='Copiar Nodo' className="sec_img1Copiar"></img>
-                    <span className="sec_span1Copiar">Copiar<br></br>Nodo</span>
-                    <img src={paste} title='Pegar nodo' className="sec_img2Copiar"></img>
-                    {/* Desplegale */}
-                    <span className="sec_span2Copiar">Pegar<br></br> Formato</span>
-                    <img src={tigeras} title='Cortar' className="sec_img3Copiar"></img>
-                    <span className='sec_span3Cortar'>Cortar</span>
-                    <img src={papel}  title='Copiar' className="sec1_img4Copiar"></img>
-                    <img src={paste}  title='Copiar como imagen' className="sec1_img5Copiar"></img>
-                    <select className='selectFuente'>
-                        <option value='Arial'>Arial</option>
-                        <option value='Calibri'>Calibri</option>
-                        <option value='CalibriLight'>Calibri Light</option>
-                    </select>
-                    <select className='selectSize'>
-                        <option value='5'>5</option>
-                        <option value='5.5'>5.5</option>
-                        <option value='6'>6</option>
-                    </select>
-                    <img src={plus} className='S1ImgMas'></img>
-                    <img src={menos} className='S1ImgMenos'></img>
-                </div>
-                <div className={CarouselBar == 3 ? "secccion2 Sopen" : "secccion2"}>
-                    <img src={tabladinamica} className='sec2_img1TablaDinamica'></img>
-                    <span className='sec2_span1'>Tabla<br></br>dinamica</span>
-                    <img src={graficodinamico} className='sec2_img2GraficoDinamico'></img>
-                    <span src={papel} className='sec2_span2'>Grafico<br></br>dinamico</span>
-                    <img src={tabla} className='sec2_img3Tabla'></img>
-                    <span className='sec2_span3'>Tabla</span>
-                    <img src={imagen} className='sec2_img4Imagen'></img>
-                    <span className='sec2_span4'>Imagen</span>
-                    {/* Desde archivo, Extraer texto */}
-                    <span className='sec2_span5'>Imagenes de Unsplash</span>
-                    <img src={captura} className='sec2_img5Captura'></img>
-                    <span className='sec2_span6'>Captura</span>
-                    <img src={formas} className='sec2_img6Formas'></img>
-                    <span className='sec2_span7'>Formas</span>
-                    <div id='WordArtDiv'>
-                        <img src={WordArt} className='sec2_img7WA'></img>
-                        <span className='sec2_span8'>WordArt</span>
-                    </div>
-                    <div id='CuadroDeTextoDiv'>
-                        <img src={cuadrodetexto} className='sec2_img8CT'></img>
-                        <span className='sec2_span9'>Cuadro <br></br>de Texto</span>
-                    </div>
-                    {/* Rectangulo de captua de pantalla
-            Elipse de captura de pantalla */}
-
-                </div>
-                <div className={CarouselBar == 4 ? "secccion3 Sopen" : "secccion3"}>
-                    <img src={vistaPreviaImpresion} className='sec3_img1VP'></img>
-                    <span className='sec3_span1'>Vista previa de impresión</span>
-                    <img src={Margenes} className='sec3_img2Margenes'></img>
-                    <span className='sec3_span2'>Margenes</span>
-                    <img src={orientacion} className='sec3_img3Orientacion'></img>
-                    <span className='sec3_span3'>Orientacion</span>
-                    <img src={tamaño} className='sec3_img4Tam'></img>
-                    <span className='sec3_span4'>Tamaño</span>
-                    <img src={areaDeImpresion} className='sec3_img5AreaImp'></img>
-                    <span className='sec3_span5'>Area de Impresión</span>
-                    <img src={zoomDePagina} className='sec3_img6ZoomPage'></img>
-                    <span className='sec3_span6'>Zoom de <br></br>página</span>
-                    <div className='sec3_div1'>
-                        <img src={titulosDeimpresion}></img>
-                        <span>Titulos de impresion</span>
-                    </div>
-                    <div className='sec3_div2'>
-                        <img src={imprimirEncabezado}></img>
-                        <span>Imprimir encabezado y pie pagina</span>
-                    </div>
-                </div>
-                <div className={CarouselBar == 5 ? "secccion4 Sopen" : "secccion4"}>
-                    <img src={insertarFuncion} className='sec4_img1IF'></img>
-                    <span className='sec4_span1'>Insertar Funcion</span>
-                    <img src={autosuma} className='sec4_img2Autosuma'></img>
-                    <span className='sec4_span2'>Autosuma</span>
-                    <img src={recientes} className='sec4_img3Recientes'></img>
-                    <span className='sec4_span3'>Recientes</span>
-                    <div className='sec4_div1'>
-                        <img src={financieras} className='sec4_img4Tamano'></img>
-                        <span>Financieras</span>
-                    </div>
-                    <div className='sec4_div2'>
-                        <img src={logicas} className='sec4_img4Tamano'></img>
-                        <span>Logicas</span>
-                    </div>
-                    <div className='sec4_div3'>
-                        <img src={texto} className='sec4_img4Tamano'></img>
-                        <span>Texto</span>
-                    </div>
-                    <div className='sec4_div4'>
-                        <img src={fechayHora} className='sec4_img4Tamano'></img>
-                        <span>Fecha y Hora</span>
-                    </div>
-                    <div className='sec4_div5'>
-                        <img src={busquedReferencia} className='sec4_img6Zoom'></img>
-                        <span>Busqueda y referencia</span>
-                    </div>
-                    <div className='sec4_div6'>
-                        <img src={matematicaTrigono} className='sec4_img6Zoom'></img>
-                        <span>Matematicas y trigonometricas</span>
-                    </div>
-                    <div className='sec4_div7'>
-                        <img src={masFunciones} className='sec4_img6Zoom'></img>
-                        <span>Mas<br></br>funciones</span>
-                    </div>
-                </div>
-            </section>
-            {/* <div  onClick={() => {SetCarousel(true)}} className='especial'>
+      <section id="SeccionMain">
+        {CarouselBar == 1 && <Home />}
+        {CarouselBar == 2 && <Home />}
+        {CarouselBar == 3 && <Insert />}
+        {CarouselBar == 4 && <PageLayout />}
+        {CarouselBar == 5 && <Formula />}
+        {CarouselBar === 6 && <Review />}
+        {CarouselBar === 7 && <View />}
+        {CarouselBar === 8 && <Tools />}
+      </section>
+      {/* <div  onClick={() => {SetCarousel(true)}} className='especial'>
                 <span>&gt;</span>
             </div> */}
-        </nav>
-        /*<div>
+    </nav>
+    /*<div>
      <div style={{display: 'none'}}>
      ---
             Inicio
@@ -698,7 +578,7 @@ const ToolBar = ({CarouselBar}) => {
 
             Calcula el número de días entre dos fechas basándose en un año de 360 días (doce meses de 30 días en un año),
             que se usa en unos cálculos de contabilidad. Utilizado esta función para ayudar a calcular
-            pagos si su sistema de contabilidad está basado en 30 días un mes y 12 meses un año.
+            pagos si su sistema de contabilidad está basado en 30 días un mes y 16 meses un año.
 
             Fecha_Comienzo fecha_inicial y fecha_final son las dos fechas entre las que se desea saber el número de días.
 
@@ -1124,8 +1004,7 @@ const ToolBar = ({CarouselBar}) => {
      </div>
 
         </div>*/
-    )
-}
+  );
+};
 
-
-export default ToolBar
+export default ToolBar;

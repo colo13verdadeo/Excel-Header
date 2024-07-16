@@ -17,20 +17,43 @@
   width: var(--TamañoW-TopBar);
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
+  text-wrap: nowrap;
+  padding-bottom: 0.75em;
+  padding-top: 0.75em;
+}
+._TopBar_ .especial{
+
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+transform: translateY(-15px);
+font-weight:400 ;
 }
 
+._TopBar_  .especial-sx {
+  position: absolute;
+  left: 0.75em;
+  top: 30%;
+}
+._TopBar_  .especial-dx {
+  position: absolute;
+  right: 0.75em;
+  top: 30%;
+}
 ._TopBar_ .openSpan,
 ._TopBar_ .Menu_TopBar_ .openSpan {
   border-radius: 0.2rem 0.3rem 0px 0px;
-  background-color: #868686;
-  transform: translateY(12px);
+  background-color: #8888;
+  transform: translateY(8px);
   padding-left: 10px;
   padding-right: 10px;
 }
 
-._TopBar_ span {
+._TopBar_ span:not(.especial span) {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding-left: 10px;
+    padding-right: 10px;
 }
 .TopBarImg1 {
   width: 1.4rem;
