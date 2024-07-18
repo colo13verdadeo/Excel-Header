@@ -1,30 +1,32 @@
-import React, { useState , useEffect,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./TopBar_module.css";
 import Menu from "./components/Menu";
 import ContentScroll from "./components/ContentScroll";
 //SVGs
-import barras from './assets/SVG/barras.svg'
+import barras from "./assets/SVG/barras.svg";
 
 const TopBar = ({ SetCarouselToolBar }) => {
   const [estadoSpan, setEstadoSpan] = useState(2);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const buttonRef = useRef(null);
-const contentRef = useRef()
+  const contentRef = useRef();
 
   return (
-    <div className="_TopBar_" ref={contentRef} >
-      <ContentScroll ref={contentRef} reloadProps = {[isMenuOpen]}/>
-      <div ref={buttonRef} id="Menu_TopBar_" onClick={() => setIsMenuOpen((prev) => !prev)}>
-        <img src={barras} className="TopBarImg1"/>
+    <div className="_TopBar_" ref={contentRef}>
+      <ContentScroll ref={contentRef} reloadProps={[isMenuOpen]} />
+      <div
+        ref={buttonRef}
+        id="Menu_TopBar_"
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+      >
+        <img src={barras} className="TopBarImg1" />
         <span
           className={isMenuOpen ? "openSpan" : ""}
           onClick={() => setEstadoSpan(0)}
         >
           Menu
         </span>
-        {isMenuOpen && (
-            <Menu setIsMenuOpen={setIsMenuOpen} />
-        )}
+        {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
       </div>
       <span
         className={estadoSpan == 1 ? "openSpan" : ""}
@@ -75,7 +77,7 @@ const contentRef = useRef()
           SetCarouselToolBar(6);
         }}
       >
-        Revisar
+       Datos
       </span>
       <span
         className={estadoSpan == 7 ? "openSpan" : ""}
@@ -84,13 +86,22 @@ const contentRef = useRef()
           SetCarouselToolBar(7);
         }}
       >
-        Vista
+        Revisar
       </span>
       <span
         className={estadoSpan == 8 ? "openSpan" : ""}
         onClick={() => {
           setEstadoSpan(8);
           SetCarouselToolBar(8);
+        }}
+      >
+        Vista
+      </span>
+      <span
+        className={estadoSpan == 9 ? "openSpan" : ""}
+        onClick={() => {
+          setEstadoSpan(9);
+          SetCarouselToolBar(9);
         }}
       >
         Herramientas

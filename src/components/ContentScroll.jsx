@@ -1,13 +1,13 @@
 import React, { forwardRef, useEffect, useState } from "react";
 
-const ContentScroll = forwardRef(function ContentScroll({reloadProps}, ref) {
+const ContentScroll = forwardRef(function ContentScroll({ reloadProps }, ref) {
   const [isScrollable, setIsScrollable] = useState([false, false]);
-   const [contentWidth, setContentWidth] = useState(0);
+  const [contentWidth, setContentWidth] = useState(0);
   let isAlreadyLoaded = false;
-  
+
   const contentRef = ref;
 
-    //checkear si el contenido se ve interamente o hay que scrollear para verlo,
+  //checkear si el contenido se ve interamente o hay que scrollear para verlo,
   //en caso de que no se vea activar las flechas de scroll con el useState
   const checkScrollable = () => {
     if (contentRef.current.scrollWidth > contentRef.current.clientWidth) {
@@ -19,7 +19,7 @@ const ContentScroll = forwardRef(function ContentScroll({reloadProps}, ref) {
   };
 
   useEffect(() => {
-    contentRef.current.scrollBy({ left: -1000 });
+    contentRef.current.scrollBy({ left: -10000 });
     checkScrollable();
   }, reloadProps);
 
@@ -35,6 +35,31 @@ const ContentScroll = forwardRef(function ContentScroll({reloadProps}, ref) {
     const observer = new MutationObserver(checkScrollable);
     observer.observe(contentRef.current, { childList: true, subtree: true });
     isAlreadyLoaded = true;
+    
+    //scrollear contenido desde el raton del usuario
+    const mouseScroll = (event) => {
+      event.preventDefault();
+      contentRef.current.scrollBy({
+        left: event.deltaY,
+        behavior: "smooth",
+      });
+      if (
+        contentRef.current.scrollWidth -
+          contentRef.current.scrollLeft -
+          contentRef.current.clientWidth <=
+        1
+      ) {
+        setIsScrollable([true, false]);
+      } else if (contentRef.current.scrollLeft === 0) {
+        setIsScrollable([false, true]);
+      } else {
+        setIsScrollable([true, true]);
+      }
+    };
+
+    const scrollContainer = contentRef.current;
+    scrollContainer.addEventListener("wheel", mouseScroll);
+
     return () => {
       observer.disconnect();
     };

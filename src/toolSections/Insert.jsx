@@ -17,12 +17,20 @@ import media from "../assets/SVG/media.svg";
 import bibliotecaDeIconos from "../assets/SVG/bibliotecadeiconos.svg"
 import graficoCircular from "../assets/SVG/graficoCircular.svg"
 import biblioDeGraficos from "../assets/SVG/bibliotecaDeGraficos.svg"
+import graficoCirculos from "../assets/SVG/graficoCirculos.svg"
+import graficoBarras from "../assets/SVG/graficoBarras.svg"
+import graficoMont from "../assets/SVG/graficoMontaña.svg"
+import graficoPastel from "../assets/SVG/graficoPastel.svg"
+import graficosBarras from "../assets/SVG/graficosBarras.svg"
+import graficosMedia from "../assets/SVG/graficosMedia.svg"
+import hexagono from "../assets/SVG/hexagono.svg"
+import hipervinculo from "../assets/SVG/Hipervinculo.svg"
 
 
 export default function Insert() {
   return (
     <div className="section2 toolItems">
-      <Tippy content = {"Es una prueba"} delay={100} placement="bottom">
+      <Tippy content = {"Es otra prueba"} delay={100} placement="bottom">
    
         <button className="oneToolItem">
           <div>
@@ -63,12 +71,7 @@ export default function Insert() {
         </div>
       </button>
 
-      <button className="oneToolItem">
-        <div>
-          <img width={24} src={formas} />
-          <p className="sec2_span6">Captura</p>
-        </div>
-      </button>
+
       <button className="oneToolItem">
         <div>
           <img width={24} src={captura} className="sec2_img5Captura" />
@@ -77,11 +80,16 @@ export default function Insert() {
       </button>
       <button className="oneToolItem">
         <div>
+          <img width={24} src={formas} />
+          <p className="sec2_span6">Captura</p>
+        </div>
+      </button>
+      <button className="oneToolItem">
+        <div>
           <img width={24} src={bibliotecaDeIconos} className="sec2_img5Captura" />
           <p className="sec2_span5">Bibloteca de Iconos</p>
         </div>
       </button>
-      <div className="toolDivider"></div>
       {/* Desde archivo, Extraer texto */}
 
       <div className="grid-row-2">
@@ -110,28 +118,28 @@ export default function Insert() {
 
       <div className="grid-items-10">
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficoBarras} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficosBarras} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficosMedia} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={hexagono} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficoMont} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
           <img width={16} src={graficoOnda} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficoCirculos} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
-          <img width={16} src={captura} className="sec2_img5Captura" />
+          <img width={16} src={graficoPastel} className="sec2_img5Captura" />
         </button>
         <button className="oneToolItem">
           <img width={16} src={media} className="sec2_img5Captura" />
@@ -149,13 +157,13 @@ export default function Insert() {
       </button>
       <div className="toolDivider"></div>
 
-      <div className="toolDivider"></div>
       <button className="oneToolItem">
         <div>
-          <img width={24} src={captura} className="sec2_img5Captura" />
-          <p className="sec2_span5">Hyperlink</p>
+          <img width={24} src={hipervinculo} className="sec2_img5Captura" />
+          <p className="sec2_span5">Hipervinculo</p>
         </div>
       </button>
+      <div className="toolDivide"></div>
       <button className="oneToolItem">
         <div>
           <img width={24} src={captura} className="sec2_img5Captura" />
@@ -189,7 +197,7 @@ export default function Insert() {
         </button>
         <button className="oneToolItem">
           <img width={16} src={cuadrodetexto} />
-          <p className="sec2_span9">Camera</p>
+          <p className="sec2_span9">Camara</p>
         </button>
       </div>
 

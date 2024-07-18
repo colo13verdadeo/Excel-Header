@@ -7,7 +7,6 @@ import papel from "../assets/SVG/papel.svg";
 import menos from "../assets/SVG/menos.svg";
 
 import insertarFuncion from "../assets/SVG/insertarFuncion.svg";
-import autosuma from "../assets/SVG/autosuma.svg";
 import recientes from "../assets/SVG/recientes.svg";
 import financieras from "../assets/SVG/financieras.svg";
 import logicas from "../assets/SVG/logicas.svg";
@@ -46,7 +45,12 @@ import cajaDeErramientas from "../assets/SVG/cajaDeHerramientas.svg"
 import punto00 from "../assets/SVG/.00.svg"
 import trat00 from "../assets/SVG/_-.0.svg"
 import formatoCondicional from "../assets/SVG/formatocondicional.svg"
-
+import autosuma from "../assets/SVG/autosuma.svg";
+import cuadrado from "../assets/SVG/cuadrado.svg";
+import hojaDeCalculo from "../assets/SVG/hojadecalculo.svg";
+import cuadroPincel from "../assets/SVG/cuadropincel.svg";
+import borrar from "../assets/SVG/borrar.svg";
+import autoFiltro from "../assets/SVG/autofiltro.svg"
 
 
 export default function Home() {
@@ -62,14 +66,13 @@ export default function Home() {
       </button>
       <button className="oneToolItem">
         <div>
-          <img width={24} src={paste} title="Pegar nodo"/>
+          <img width={24} src={paste} title="Pegar formato"/>
           {/* Desplegale */}
           <p className="sec_span2Copiar">
             Pegar<br></br> Formato
           </p>
         </div>
       </button>
-      <div className="toolDivider"></div>
       <div className="grid-row-2">
         <button className="oneToolItem">
           <img
@@ -89,6 +92,7 @@ export default function Home() {
           />
         </button>
       </div>
+      <div className="toolDivider"></div>
       <div className="grid-items-16">
         <select className="selectFuente">
           <option value="Arial">Arial</option>
@@ -125,14 +129,15 @@ export default function Home() {
         <button className="oneToolItem">
           <img src={menos} className="S1ImgMenos" width={16}/>
         </button>
-        <button className="oneToolItem">
-          <img src={ABalde} className="S1ImgMenos" width={16}/>
-        </button>
+ 
         <button className="oneToolItem">
           <img src={pintura} className="S1ImgMenos" width={16}/>
         </button>
         <button className="oneToolItem">
-          <img src={menos} className="S1ImgMenos" width={16}/>
+          <img src={ABalde} className="S1ImgMenos" width={16}/>
+        </button>
+        <button className="oneToolItem">
+          <img src={borrar} className="S1ImgMenos" width={16}/>
         </button>
       </div>
       <div className="toolDivider"></div>
@@ -174,7 +179,7 @@ export default function Home() {
       </div>
       <button className="oneToolItem">
         <div>
-          <img width={24} src={paste} title="Pegar nodo"/>
+          <img width={24} src={paste} title="Orientacion"/>
           {/* Desplegale */}
           <p className="sec_span2Copiar">
             Orientacion
@@ -185,7 +190,7 @@ export default function Home() {
         <button className="oneToolItem">
           <img
             src={wrapText}
-            title="Copiar"
+            title="Ajustar texto"
             className="sec1_img4Copiar"
             width={16}
           />
@@ -194,7 +199,7 @@ export default function Home() {
         <button className="oneToolItem">
           <img
             src={combinaryCentrar}
-            title="Copiar"
+            title="Combinar y Centrar"
             className="sec1_img4Copiar"
             width={16}
           />
@@ -230,7 +235,7 @@ export default function Home() {
         <button className="oneToolItem">
           <img
             src={filas}
-            title="Copiar"
+            title="Filas y Columnas"
             className="sec1_img4Copiar"
             width={16}
           />
@@ -238,8 +243,8 @@ export default function Home() {
         </button>
         <button className="oneToolItem">
           <img
-            src={papel}
-            title="Copiar"
+            src={hojaDeCalculo}
+            title="Hoja de calculo"
             className="sec1_img4Copiar"
             width={16}
           />
@@ -258,7 +263,7 @@ export default function Home() {
       <div className="grid-row-2">
         <button className="oneToolItem">
           <img
-            src={papel}
+            src={cuadroPincel}
             title="Copiar"
             className="sec1_img4Copiar"
             width={16}
@@ -266,7 +271,7 @@ export default function Home() {
         </button>
         <button className="oneToolItem">
           <img
-            src={papel}
+            src={cuadrado}
             title="Copiar"
             className="sec1_img4Copiar"
             width={16}
@@ -288,13 +293,13 @@ export default function Home() {
           <span>Congelar Paneles</span>
         </button>
         <button className="oneToolItem">
-          <img width={16} src={fechayHora} className="sec4_img4Tamano"/>
+          <img width={16} src={autosuma} className="sec4_img4Tamano"/>
           <span>Autosuma</span>
         </button>
         <button className="oneToolItem">
           <img
             width={16}
-            src={busquedReferencia}
+            src={autoFiltro}
             className="sec4_img6Zoom"
           />
           <span>Autofiltro</span>

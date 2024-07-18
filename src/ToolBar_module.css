@@ -10,7 +10,8 @@ select {
 #headerToolBar {
   justify-content: left;
   width: var(--Tamaño-Toolbar);
-  box-shadow: -5px 5px 5px #8888, 5px -5px 5px #8888;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  
   background-color: var(--Background-Nav);
   border-radius: 10px;
   margin: 10px 0 10px 0;
@@ -84,7 +85,7 @@ select {
 .section3,
 .section6,
 .secccion4,
-.section7 {
+.section7,.sectionData {
   display: flex;
   column-gap: 10px;
 }

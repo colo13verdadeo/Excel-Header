@@ -5,10 +5,10 @@ import './NavBar_module.css'
 //SVGs
 import brocha from './assets/SVG/brocha.svg'
 
-const NavBar = ({pruebas}) => {
+const NavBar = () => {
     return(
         <div id='_NavBar_'>
-            <span onClick={() => pruebas.prueba1()}>Incio</span>
+            <span>Incio</span>
             <span>What's New</span>
             <span>Nuevo</span>
             <span>Documento1</span>

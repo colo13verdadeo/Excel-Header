@@ -17,6 +17,7 @@ import bloquearCeldas from  "../assets/SVG/bloquearCeldas.svg"
 import corregirOrto from  "../assets/SVG/corregirOrto.svg"
 import protegerHoja from  "../assets/SVG/protegerHoja.svg"
 import sinonimos from  "../assets/SVG/Sinonimos.svg"
+import restablecer from  "../assets/SVG/restablecer.svg"
 export default function ReviewTool() {
   return (
     <div className="section6 toolItems">
@@ -52,8 +53,8 @@ export default function ReviewTool() {
           <span>Anterior</span>
         </button>
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16} />
-          <span>Reiniciar</span>
+          <img src={restablecer} className="sec4_img1VistaPrevia" width={16} />
+          <span>Restablecer</span>
         </button>
         <button className="oneToolItem">
           <img src={siguiente} className="sec4_img1VistaPrevia" width={16} />
@@ -74,19 +75,19 @@ export default function ReviewTool() {
           <img src={permitirUsarios} className="sec4_img1VistaPrevia" width={16} />
           <span>Permitir a los usuarios editar el rango</span>
         </button>
-      </div>
-      <button className="oneToolItem">
-        <div>
-          <img src={paste} className="sec4_img1VistaPrevia" width={24} />
-          <p>Proteger hoja</p>
-        </div>
-      </button>
-      <button className="oneToolItem">
+      </div>      <button className="oneToolItem">
         <div>
           <img src={protegerHoja} className="sec4_img1VistaPrevia" width={24} />
           <p>Protejer hoja</p>
         </div>
       </button>
+      <button className="oneToolItem">
+        <div>
+          <img src={paste} className="sec4_img1VistaPrevia" width={24} />
+          <p>Protejer Libro</p>
+        </div>
+      </button>
+
       <button className="oneToolItem">
         <div>
           <img src={compartirLibro} className="sec4_img1VistaPrevia" width={24} />

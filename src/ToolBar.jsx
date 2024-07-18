@@ -6,6 +6,7 @@ import Tools from "./toolSections/Tools";
 import PageLayout from "./toolSections/PageLayout";
 import Insert from "./toolSections/Insert";
 import Home from "./toolSections/Home";
+import Data from "./toolSections/Data"
 //LIBS
 import React, { useState, useEffect, useRef } from "react";
 
@@ -47,9 +48,10 @@ const ToolBar = ({ CarouselBar }) => {
         {CarouselBar == 3 && <Insert />}
         {CarouselBar == 4 && <PageLayout />}
         {CarouselBar == 5 && <Formula />}
-        {CarouselBar === 6 && <Review />}
-        {CarouselBar === 7 && <View />}
-        {CarouselBar === 8 && <Tools />}
+        {CarouselBar === 6 && <Data />}
+        {CarouselBar === 7 && <Review />}
+        {CarouselBar === 8 && <View />}
+        {CarouselBar === 9 && <Tools />}
       </section>
       {/* <div  onClick={() => {SetCarousel(true)}} className='especial'>
                 <span>&gt;</span>

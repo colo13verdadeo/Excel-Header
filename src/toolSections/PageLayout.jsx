@@ -11,6 +11,7 @@ import imprimirEncabezado from "../assets/SVG/imprimirEncabezado.svg";
 import paste from "../assets/SVG/paste.svg";
 import fondo from "../assets/SVG/fondo.svg";
 import temas from "../assets/SVG/tema.svg";
+import insertarSaltos from "../assets/SVG/insertarSaltos.svg";
 
 export default function PageLayout() {
   return (
@@ -69,36 +70,27 @@ export default function PageLayout() {
         </div>
       </button>
 
-      <button className="oneToolItem">
-        <div className="sec3_div1">
-          <img width={24} src={titulosDeimpresion}/>
-          <p>Area de impresion</p>
-        </div>
-      </button>
-      <button className="oneToolItem">
-        <div className="sec3_div2">
-          <img width={24} src={imprimirEncabezado}/>
-          <p>Page zoom</p>
-        </div>
-      </button>
+
+
 
       <div className="grid-items-4">
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
+          <img src={titulosDeimpresion} className="sec4_img1VistaPrevia" width={16}/>
           <span>Titulos de impresion</span>
         </button>
+  
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
+        <input type="checkbox"></input>
+
+          <span> Imprimir encabezado y pie de página</span>
+        </button>
+        <button className="oneToolItem">
+          <img src={imprimirEncabezado} className="sec4_img1VistaPrevia" width={16}/>
           <span>Imprimir líneas de cuadrícula
           </span>
         </button>
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
-          <span> Imprimir encabezado y pie de página</span>
-        </button>
-        <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
-          <span>imprimir encabezados</span>
+         <input type="checkbox" /> <span>imprimir encabezados</span>
         </button>
       </div>
       <div className="toolDivider"></div>
@@ -111,11 +103,11 @@ export default function PageLayout() {
       </button>
       <div className="grid-row-2">
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
+          <input type="checkbox" name="" id="" />
           <span>Ver saltos de paginas</span>
         </button>
         <button className="oneToolItem">
-          <img src={paste} className="sec4_img1VistaPrevia" width={16}/>
+          <img src={insertarSaltos} className="sec4_img1VistaPrevia" width={16}/>
           <span>Insertar salto de pagina</span>
         </button>
       </div>
