@@ -1,7 +1,7 @@
 # Importante:
-> Falta añadir estilos y perfeccion. Me gustaria que me mencionen como quieren el diseño, si tienen un figma aun mejor.
+> Falta añadir estilos y perfeccion.
 
-> Todo feedback es bueno.
+> Proyecto discontinuado.
 
 ## Version 1.4.1:
 > Se ha corregido errores, añadido mas estilos, formatos e imagenes.
@@ -23,13 +23,13 @@
 > Importante utilizar "npm install" dentro del directorio para instalar Tippy de no tenerlo.
 
 # En caso de errores de programacion:
-> Informarmelo.
+> Discontinuado.
 
 # En caso de errores visuales incorrectos:
-> Informarmelo
+> Discontinuado.
 
 # En caso incoherencia o correcciones:
-> Enviarme una foto de como quieren que se vea ese apartado.
+> Discontinuado.
 
 
 ## Muestras:
